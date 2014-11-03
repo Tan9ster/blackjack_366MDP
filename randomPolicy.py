@@ -1,8 +1,8 @@
 import blackjack
 
-from numpy import *
-from random import *
-from scipy import *
+import numpy
+import random
+import scipy 
 
 def showOneGame():
     s=blackjack.init()
@@ -28,7 +28,7 @@ def bjrandomPolicy(numEpisodes=10000):
         s=blackjack.init()
         while s!=-1: #-1 is terminal
             # Rand int returns a number between 0, 1
-            a=randint(0,1)
+            a=random.randint(0,1)
             G,sp=blackjack.sample(s,a)
             s=sp
         print("Episode: ", episodeNum, "Return: ", G)
